@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity(), NewsItemClicked {
 
     }
     private fun fetchdata(){
-        val url="https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=b361606f21874591983c1913f4cbd6d1"
+        val url="https://saurav.tech/NewsAPI/everything/cnn.json"
         val jsonObjectRequest= JsonObjectRequest(
             Request.Method.GET,
             url,
@@ -49,6 +49,7 @@ class MainActivity : AppCompatActivity(), NewsItemClicked {
             }
 
         )
+
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest)
     }
 

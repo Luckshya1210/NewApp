@@ -22,7 +22,7 @@ class NewsListAdapter (private val listner:NewsItemClicked):RecyclerView.Adapter
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
         val currentItem=items[position];
         holder.titleView.setText(currentItem.title)
-        holder.author.text=currentItem.author;
+        holder.author.text="Author: "+currentItem.author;
         Glide.with(holder.itemView.context).load(currentItem.imageUrl).into(holder.image)
 
     }
